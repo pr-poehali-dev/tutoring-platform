@@ -10,7 +10,7 @@ const Header = () => {
             <Icon name="GraduationCap" className="text-white" size={20} />
           </div>
           <span className="text-xl font-montserrat font-bold text-gray-800">
-            TutorSpace
+            LernUp
           </span>
         </div>
 
