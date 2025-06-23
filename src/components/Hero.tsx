@@ -7,15 +7,18 @@ const Hero = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <section className="relative min-h-[600px] gradient-bg overflow-hidden">
-      <div className="absolute inset-0 bg-black/10"></div>
-      <div className="relative container mx-auto px-4 py-20 text-center text-white">
-        <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 animate-fade-in">
+    <section className="relative">
+      {/* Тонкая фиолетовая полоска */}
+      <div className="h-2 gradient-bg"></div>
+
+      {/* Основной контент */}
+      <div className="container mx-auto px-4 py-20 text-center">
+        <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 text-gray-900 animate-fade-in">
           Найдите идеального <br />
-          <span className="text-primary-light">репетитора</span>
+          <span className="text-primary">репетитора</span>
         </h1>
 
-        <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90 animate-fade-in">
+        <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-600 animate-fade-in">
           Тысячи проверенных преподавателей готовы помочь вам достичь учебных
           целей
         </p>
@@ -26,7 +29,7 @@ const Hero = () => {
               placeholder="Найти предмет или репетитора..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full py-3 pl-12 pr-4 text-gray-800 bg-white rounded-full border-0 shadow-lg"
+              className="w-full py-3 pl-12 pr-4 text-gray-800 bg-white rounded-full border-2 border-gray-200 shadow-lg"
             />
             <Icon
               name="Search"
@@ -38,24 +41,25 @@ const Hero = () => {
 
         <Button
           size="lg"
-          className="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-full font-medium"
+          className="bg-primary text-white hover:bg-primary/90 px-8 py-3 rounded-full font-medium mb-16"
         >
           <Icon name="Sparkles" className="mr-2" size={20} />
           Начать поиск
         </Button>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="text-center">
+        {/* Три фиолетовых карточки */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="gradient-bg rounded-lg p-6 text-white text-center shadow-lg">
             <div className="text-3xl font-bold mb-2">1000+</div>
-            <div className="text-primary-light">Репетиторов</div>
+            <div className="text-white/90">Репетиторов</div>
           </div>
-          <div className="text-center">
+          <div className="gradient-bg rounded-lg p-6 text-white text-center shadow-lg">
             <div className="text-3xl font-bold mb-2">50+</div>
-            <div className="text-primary-light">Предметов</div>
+            <div className="text-white/90">Предметов</div>
           </div>
-          <div className="text-center">
+          <div className="gradient-bg rounded-lg p-6 text-white text-center shadow-lg">
             <div className="text-3xl font-bold mb-2">4.9</div>
-            <div className="text-primary-light">Средний рейтинг</div>
+            <div className="text-white/90">Средний рейтинг</div>
           </div>
         </div>
       </div>
