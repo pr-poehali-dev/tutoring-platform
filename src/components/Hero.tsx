@@ -8,8 +8,27 @@ const Hero = () => {
 
   return (
     <section className="relative">
-      {/* Тонкая фиолетовая полоска */}
-      <div className="h-2 gradient-bg"></div>
+      {/* Фиолетовая полоска с поиском */}
+      <div className="gradient-bg rounded-full mx-4 py-4 px-6">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <h2 className="text-white font-medium text-lg">
+            Найдите идеального репетитора
+          </h2>
+          <div className="relative flex-1 max-w-md">
+            <Input
+              placeholder="Найти предмет или репетитора..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full py-2 pl-10 pr-4 text-gray-800 bg-white rounded-full border-none shadow-sm"
+            />
+            <Icon
+              name="Search"
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              size={16}
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Основной контент */}
       <div className="container mx-auto px-4 py-20 text-center">
